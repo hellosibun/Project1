@@ -11,7 +11,9 @@ public class calculator {
         do{
             System.out.println("1. ADD TWO NUMBERS");
             System.out.println("2. SUBTRACT TWO NUMBERS");
-            System.out.println("3. EXIT\n");
+            System.out.println("3. MULTIPLICATION TWO NUMBERS");
+            System.out.println("4. DIVISION TWO NUMBERS");
+            System.out.println("5. EXIT\n");
             System.out.println("ENTER YOUR CHOICE : ");
             choice=scan.next().charAt(0);
             switch (choice) {
@@ -32,6 +34,22 @@ public class calculator {
                     break;
 
                 case '3' :
+                    System.out.println("Enter two Numbers : ");
+                    a=scan.nextFloat();
+                    b=scan.nextFloat();
+                    res = a*b;
+                    System.out.println("Result = "+res);
+                    break;
+
+                case '4' :
+                    System.out.println("Enter two Numbers : ");
+                    a=scan.nextFloat();
+                    b=scan.nextFloat();
+                    res = a/b;
+                    System.out.println("Result = "+res);
+                    break;
+
+                case '5' :
                     System.exit(0);
                     break;
 
@@ -39,6 +57,6 @@ public class calculator {
                     System.out.println("INVALID CHOICE !!!");
             }
             System.out.println("--------------------------------------");
-        }while (choice!=2);
+        }while (choice!=5);
     }
 }
